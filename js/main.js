@@ -6,7 +6,6 @@ function getTopPartsHeight() {
 
 function init(){
     
-    // move part 3 to cover part 2
     gsap.set('.part3', {
         y: () => {
             return -(getTopPartsHeight())
@@ -21,17 +20,25 @@ function init(){
         }
     });
 
-    gsap.set('.part4', {y: '-547px'});
-    gsap.set('.part5', {y: '-722px'});
-    gsap.set('.part6', {y: '-842px'});
+    const partTopOffsets = [547, 722, 842];
 
-    gsap.to('.part6', { y: 0, ease: 'none', scrollTrigger: {
-        trigger: '.pen-body',
-        start: 'top bottom-=640px',
-        end: '+=842',
-        scrub: true,
-        markers: true
-    }});
+    function fixPart(el, offset, index) {
+        gsap.set(el, {y: -offset});
+
+        gsap.to(el, { y: 0, ease: 'none', scrollTrigger: {
+            trigger: '.pen-body',
+            start: 'top bottom-=640px',
+            end: `+=${offset}`,
+            scrub: true,
+            markers: true
+        }});
+    }
+
+    gsap.utils.toArray(['.part4', '.part5', '.part6']).forEach((part, index) => {
+
+        fixPart(part, partTopOffsets[index], index);
+
+    });
 
 }
 
