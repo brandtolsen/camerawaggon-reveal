@@ -17,10 +17,13 @@ function init(){
             start: 'top bottom-=270px',
             end: `+=${getTopPartsHeight()}`,
             pin: true,
-            pinSpacing: false,
-            markers: true
+            pinSpacing: false
         }
     });
+
+    gsap.set('.part4', {y: '-547px'});
+    gsap.set('.part5', {y: '-722px'});
+    gsap.set('.part6', {y: '-842px'});
 
 }
 
