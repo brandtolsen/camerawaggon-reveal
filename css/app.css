@@ -102,7 +102,7 @@ h1 {
 .part4 .image {
     background-position: 50% -626px;
     min-height: 430px;
-    
+
 }
 .part5 {
     position: relative;
@@ -118,7 +118,7 @@ h1 {
 }
 
 /* =Fade In Text */
-/* .part h3,
+.part h3,
 .part p {
     transition: all 0.3s ease-in;
     opacity: 0;
@@ -135,7 +135,7 @@ h1 {
 }
 .part p {
     transform: translateX(20px);
-} */
+}
 
 
 /* =Footer */
@@ -170,7 +170,6 @@ h1 {
 @media only screen and (min-width: 768px) {
     .parts p, .parts h3 {
         font-size: 18px;
-        visibility: hidden;
     }
     h1 {
         font-size: 65px;
