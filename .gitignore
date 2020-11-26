@@ -1,1 +1,7 @@
-img
+# Ignore everything
+img/*
+
+# But not these files...
+!img_pen.png
+!img_pen-landscape.png
+!img_pen-body.png
