@@ -25,6 +25,14 @@ function init(){
     gsap.set('.part5', {y: '-722px'});
     gsap.set('.part6', {y: '-842px'});
 
+    gsap.to('.part6', { y: 0, ease: 'none', scrollTrigger: {
+        trigger: '.pen-body',
+        start: 'top bottom-=640px',
+        end: '+=842',
+        scrub: true,
+        markers: true
+    }});
+
 }
 
 window.addEventListener('load', function(){
